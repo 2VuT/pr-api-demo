@@ -28,10 +28,12 @@ class Controller extends BaseController
      *      description="Demo API Server"
      * )
      *
-     * * @OAS\SecurityScheme(
-     *      securityScheme="bearer_token",
-     *      type="http",
-     *      scheme="bearer"
+     * @OAS\SecurityDefinitions(
+     *      securityScheme="sanctum",
+     *      type="apiKey",
+     *      scheme="sanctum",
+     *      name="Authorization",
+     *      in="header"
      * )
      *
      * @OA\Tag(

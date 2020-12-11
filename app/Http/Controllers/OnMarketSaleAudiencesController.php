@@ -34,6 +34,7 @@ class OnMarketSaleAudiencesController extends Controller
      *      tags={"On market sale audiences"},
      *      summary="Get list of on market sale",
      *      description="Returns list of on market sale",
+     *      security={{"sanctum":{}}},
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
