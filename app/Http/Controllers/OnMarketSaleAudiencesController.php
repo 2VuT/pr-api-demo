@@ -27,6 +27,28 @@ class OnMarketSaleAudiencesController extends Controller
         $this->properties = $properties;
     }
 
+    /**
+     * @OA\Get(
+     *      path="/audiences/on-market-sale",
+     *      operationId="getOnMarketSaleAudiencesList",
+     *      tags={"On market sale audiences"},
+     *      summary="Get list of on market sale",
+     *      description="Returns list of on market sale",
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent()
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Bad request",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *     )
+     */
     public function index(Request $request)
     {
         $method = Str::camel($request->trigger).'OnMarketSaleAudiences';

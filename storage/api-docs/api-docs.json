@@ -125,6 +125,32 @@
                 }
             }
         },
+        "/audiences/on-market-sale": {
+            "get": {
+                "tags": [
+                    "On market sale audiences"
+                ],
+                "summary": "Get list of on market sale",
+                "description": "Returns list of on market sale",
+                "operationId": "getOnMarketSaleAudiencesList",
+                "responses": {
+                    "200": {
+                        "description": "Successful operation",
+                        "content": {
+                            "application/json": {
+                                "schema": {}
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Bad request"
+                    },
+                    "403": {
+                        "description": "Forbidden"
+                    }
+                }
+            }
+        },
         "/forgot-password": {
             "post": {
                 "tags": [
@@ -268,7 +294,12 @@
                     "403": {
                         "description": "Forbidden"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "bearer": []
+                    }
+                ]
             }
         }
     },
