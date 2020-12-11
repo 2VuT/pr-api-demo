@@ -27,14 +27,18 @@ class Controller extends BaseController
      *      url=L5_SWAGGER_CONST_HOST,
      *      description="Demo API Server"
      * )
-
+     *
+     * * @OAS\SecurityScheme(
+     *      securityScheme="bearer_token",
+     *      type="http",
+     *      scheme="bearer"
+     * )
      *
      * @OA\Tag(
      *     name="Prospect",
      *     description="API Endpoints of Projects"
      * )
      *
-     * /**
      * @OA\Get(
      *     path="/",
      *     description="Home page",

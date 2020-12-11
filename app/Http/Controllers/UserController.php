@@ -14,7 +14,7 @@ class UserController extends Controller
      *      tags={"User"},
      *      summary="Get list of users",
      *      description="Returns list of users",
-     *      security={{"bearer": {}}},
+     *      security={{"bearer_token":{}}},
      *      @OA\Response(
      *          response=200,
      *          description="Successful operation",
