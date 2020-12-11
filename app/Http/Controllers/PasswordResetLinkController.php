@@ -10,6 +10,45 @@ use Illuminate\Validation\ValidationException;
 
 class PasswordResetLinkController extends Controller
 {
+
+    /**
+     * @OA\Post(
+     *      path="/forgot-password",
+     *      operationId="userForgotPassword",
+     *      tags={"Auth"},
+     *      summary="User forgot password",
+     *      description="Send reset password link to user email",
+     *     @OA\Parameter(
+     *          name="email",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *     @OA\Parameter(
+     *          name="app_url",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="Successful operation",
+     *          @OA\JsonContent()
+     *       ),
+     *      @OA\Response(
+     *          response=401,
+     *          description="Bad request",
+     *      ),
+     *      @OA\Response(
+     *          response=403,
+     *          description="Forbidden"
+     *      )
+     *     )
+     */
     public function store(Request $request)
     {
         $request->validate([
