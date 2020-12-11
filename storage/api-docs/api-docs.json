@@ -1,10 +1,23 @@
 {
     "openapi": "3.0.0",
     "info": {
-        "title": "Prospect API",
-        "description": "Prospect API description",
+        "title": "Prospect Api Demo Documentation",
+        "description": "Prospect API demo description",
+        "contact": {
+            "email": "hai.vu@twentyci.asia"
+        },
+        "license": {
+            "name": "TwentyTech",
+            "url": "https://www.twentyci.co.uk/"
+        },
         "version": "1.0.0"
     },
+    "servers": [
+        {
+            "url": "http://pr-api.test/api/v1",
+            "description": "Demo API Server"
+        }
+    ],
     "paths": {
         "/": {
             "get": {
@@ -17,6 +30,12 @@
             }
         }
     },
+    "tags": [
+        {
+            "name": "Prospect",
+            "description": "API Endpoints of Projects"
+        }
+    ],
     "security": [
         []
     ]
