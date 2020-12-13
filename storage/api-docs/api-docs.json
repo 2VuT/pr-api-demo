@@ -148,7 +148,12 @@
                     "403": {
                         "description": "Forbidden"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "sanctum": []
+                    }
+                ]
             }
         },
         "/forgot-password": {
@@ -297,7 +302,7 @@
                 },
                 "security": [
                     {
-                        "bearer": []
+                        "sanctum": []
                     }
                 ]
             }
@@ -308,8 +313,5 @@
             "name": "Prospect",
             "description": "API Endpoints of Projects"
         }
-    ],
-    "security": [
-        []
     ]
 }
